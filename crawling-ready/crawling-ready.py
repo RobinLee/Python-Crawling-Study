@@ -11,6 +11,7 @@ from selenium import webdriver
 
 # selenium의 webdriver를 파이어폭스드라이버로 사용하기
 # webdriver는 기본으로 파폭 드라이버가 있음
+# 윈도우에서는 다른 방법으로 사용해야할 것임
 driver = webdriver.Firefox()
 
 #가져올 URL을 importURL이라는 변수에 저장 (여기서는 네이버의 많이본 연애 랭킹뉴스)
@@ -34,3 +35,6 @@ for my_title in my_titles_ul:
     my_title_text = my_title.get_text()
     # 가져온 텍스트를 뿌려줌
     print(my_title_text)
+
+#selenium 드라이버 종료
+driver.quit()
